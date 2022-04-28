@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+.cola_image {
+    display: block;
+}
+
+body {
+    background-color: #EAE8FE;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 247px;
+    padding-bottom: 171px;
+}
+
+#page .page_left,
+#page .page_right {
+    width: 360px;
+    background-color: #ffffff;
+}
+
+#page .page_title {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 386px;
+    height: 180px;
+    background-image: url(/src/img/Logo_img.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Page left */
+
+/* Cola list  */
+
+.page_left {
+    padding: 31px 27px 28px;
+}
+
+.page_left .cola_lists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.page_left .cola_lists li {
+    position: relative;
+    width: 94px;
+    height: 130px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px #00000080;
+}
+
+.page_left .cola_lists li:active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #6327FE;
+    border-radius: 10px;
+}
+
+.page_left .cola_lists li.sold-out {
+    pointer-events: none;
+}
+
+.page_left .cola_lists li.sold-out::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: no-repeat center/ 73px 59px url(/src/img/Sold-out.png) rgba(0, 0, 0, 0.8);
+}
+
+.page_left .cola_lists .cola_image {
+    width: 36px;
+    margin: 0 auto 6px;
+}
+
+.page_left .cola_lists .cola_text {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 9px;
+    font-weight: 500;
+}
+
+.page_left .cola_lists .cola_price {
+    display: block;
+    padding: 5px 15px;
+    background-color: #6327FE;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* 콜라 구입 정보 */
+
+.cola_get-section {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cola_get-section .cola_balance {
+    grid-column: 1/3;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: #EAE8FE;
+    font-weight: 500;
+}
+
+.cola_balance .cola_balance-text {
+    float: right;
+}
+
+.cola_get-section .cola_input-price {
+    grid-column: 1/3;
+    padding: 6px 0 8px 6px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #bdbdbd;
+}
+
+.cola_get-section .cola_lists-get {
+    grid-column: 1/3;
+    height: 106px;
+    padding: 7px 10px;
+    overflow-y: scroll;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    background-color: #EAE8FE;
+}
+
+.cola_get-section .cola_lists-get li {
+    height: 46px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.cola_get-section .cola_lists-get li+li {
+    margin-top: 6px;
+}
+
+.cola_lists-get .cola_text {
+    float: left;
+    font-size: 9px;
+    line-height: 33px;
+}
+
+.cola_lists-get .cola_image {
+    float: left;
+    width: 18px;
+    height: 33px;
+    margin-right: 10px;
+}
+
+.cola_lists-get .cola_count {
+    display: flex;
+    float: right;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+.cola_get-section .cola_button-return,
+.cola_get-section .cola_button-input,
+.cola_get-section .cola_button-get {
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.cola_get-section .cola_button-get {
+    color: #ffffff;
+    background-color: #6327FE;
+}
