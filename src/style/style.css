@@ -30,7 +30,7 @@ body {
     width: 100%;
     max-width: 386px;
     height: 180px;
-    background-image: url(/src/img/Logo_img.png);
+    background-image: url(../img/Logo_img.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -87,7 +87,7 @@ body {
     right: 0;
     bottom: 0;
     border-radius: 10px;
-    background: no-repeat center/ 73px 59px url(/src/img/Sold-out.png) rgba(0, 0, 0, 0.8);
+    background: no-repeat center/ 73px 59px url(../img/Sold-out.png) rgba(0, 0, 0, 0.8);
 }
 
 .page_left .cola_lists .cola_image {
